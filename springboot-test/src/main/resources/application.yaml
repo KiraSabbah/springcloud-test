@@ -1,0 +1,15 @@
+configtest:
+  v2:
+    name: properties注入
+    len: 222
+    strlist:
+      - str1
+      - v2
+      - lalal
+  v3:
+    name: springboot自动注入
+    len: 333
+    strlist:
+      - kira
+      - v3
+      - ggggg
