@@ -13,3 +13,9 @@ configtest:
       - kira
       - v3
       - ggggg
+server:
+  port: 8080
+logging:
+  level:
+    priv.kira.springcloudtest.springboottest: info
+    #priv.kira.springcloudtest.springboottest.controller: debug
