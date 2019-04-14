@@ -10,8 +10,8 @@ import priv.kira.springcloudtest.springboottest.configtest.ConfigV3;
 
 //@Controller
 @RestController
-@RequestMapping("/test")
-public class TestController {
+@RequestMapping("/configtest")
+public class ConfigTestController {
 
     @Autowired
     private ConfigV1 configV1;
@@ -27,17 +27,17 @@ public class TestController {
         return "Hello";
     }
 
-    @GetMapping("/configv1")
+    @GetMapping("/v1")
     public Object cinfigv1(){
         return configV1;
     }
 
-    @GetMapping("/configv2")
+    @GetMapping("/v2")
     public Object configv2(){
         return configV2;
     }
 
-    @GetMapping("/configv3")
+    @GetMapping("/v3")
     public Object configv3(){
         return configV3;
     }
