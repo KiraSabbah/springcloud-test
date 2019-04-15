@@ -18,10 +18,10 @@ import java.util.Date;
  * Slf4j 日志，还有很多其他相关日志注解，详见：https://projectlombok.org/features/log <br>
  * </p>
  * <p>
- * 由于使用lombok增加其他成员学习成本，并且必须也使用lombok才可编译，看源码，且查看调用不方便； <br>
+ * 由于使用lombok增加其他成员学习成本，并且必须也使用lombok才可编译，看源码，且查看调用、调试等不方便； <br>
  * 这里不建议深度使用lombok,一般仅使用@Getter\@Setter\@Slf4j； <br>
  * 开源或者对多个环境系统公开的，最好不用，或者使用delombok生成代码 <br>
- * 其实IntelliJ IDEA和Eclipse的自动生成代码已足够优秀
+ * 其实IntelliJ IDEA和Eclipse的自动生成代码已足够优秀 <br>
  * </p>
  */
 @Setter
