@@ -21,6 +21,7 @@ import java.util.Date;
  * 由于使用lombok增加其他成员学习成本，并且必须也使用lombok才可编译，看源码，且查看调用不方便； <br>
  * 这里不建议深度使用lombok,一般仅使用@Getter\@Setter\@Slf4j； <br>
  * 开源或者对多个环境系统公开的，最好不用，或者使用delombok生成代码 <br>
+ * 其实IntelliJ IDEA和Eclipse的自动生成代码已足够优秀
  * </p>
  */
 @Setter
