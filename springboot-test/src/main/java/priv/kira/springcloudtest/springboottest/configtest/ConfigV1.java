@@ -1,10 +1,12 @@
 package priv.kira.springcloudtest.springboottest.configtest;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 public class ConfigV1 {
     private String name;
     private Integer len;
