@@ -12,17 +12,17 @@ public class MyInterceptorTest implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        log.info("MyInterceptorTest--{}{}",request.getRequestURI(),"---");
+        log.info("MyInterceptorTest--{}--{}","preHandle",request.getRequestURI());
         return true;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-
+        log.info("MyInterceptorTest--{}--{}","postHandle",request.getRequestURI());
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-
+        log.info("MyInterceptorTest--{}--{}","afterCompletion",request.getRequestURI());
     }
 }
