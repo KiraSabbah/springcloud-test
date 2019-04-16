@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import priv.kira.springcloudtest.springboottest.jpatest.entity.DemoTest;
 import priv.kira.springcloudtest.springboottest.jpatest.service.DemoTestService;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/jpatest")
@@ -22,4 +24,13 @@ public class JpaTestController {
         return demoTestService.getById(id);
     }
 
+    @GetMapping("/transactiontest")
+    public List<DemoTest> transactiontest(){
+        return demoTestService.transactiontest();
+    }
+
+    @GetMapping("/transactiontest2")
+    public DemoTest transactiontest2(){
+        return demoTestService.transactiontest2();
+    }
 }
