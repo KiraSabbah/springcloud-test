@@ -18,11 +18,56 @@
 
     <modules>
         <module>springboot-test</module>
+        <module>user-service</module>
+        <module>eureka-server</module>
+        <module>order-service</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <mysql-connector-java.version>8.0.15</mysql-connector-java.version>
+        <lombok.version>1.18.6</lombok.version>
+        <jaxb.version>2.3.0</jaxb.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+
+            <!--jaxb start-->
+            <!--Java8之后不再包含jaxb，但是eureka server有使用，需依赖以下-->
+            <!--https://cloud.spring.io/spring-cloud-static/Greenwich.RELEASE/multi/multi_spring-cloud-eureka-server.html#_jdk_11_support-->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <!--jaxb end-->
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -33,6 +78,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>

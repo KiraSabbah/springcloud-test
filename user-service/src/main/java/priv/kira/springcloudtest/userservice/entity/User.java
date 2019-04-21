@@ -1,26 +1,25 @@
-package priv.kira.springcloudtest.springboottest.jpatest.entity;
+package priv.kira.springcloudtest.userservice.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Getter
 @Setter
-@ToString
 @Entity
-public class DemoTest {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String username;
 
-    @Column(name = "is_active")
-    private Boolean active;
+    private String pwd;
+
+    private String name;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date createDatetime;
