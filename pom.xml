@@ -21,6 +21,8 @@
         <module>user-service</module>
         <module>eureka-server</module>
         <module>order-service</module>
+        <module>api</module>
+        <module>consume-demo</module>
     </modules>
 
     <properties>
